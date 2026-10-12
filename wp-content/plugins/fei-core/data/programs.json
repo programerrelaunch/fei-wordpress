@@ -1,0 +1,324 @@
+{
+  "_source": "Captured verbatim from https://fei.edu/programs/* on 2026-10-12. 'key' is the stable English title used as the CRM program identifier (form <option value>). 'type' is the form programType value. ES detail sections marked es_detail_pending must be translated from the live /es/programas/* pages before publishing (only Asistente Médico was captured in full).",
+  "areas": {
+    "health":   { "en": "Healthcare",    "es": "Salud" },
+    "culinary": { "en": "Culinary Arts", "es": "Artes Culinarias" },
+    "trades":   { "en": "Skilled Trades","es": "Oficios Especializados" },
+    "business": { "en": "Business",      "es": "Negocios" }
+  },
+  "programs": [
+    {
+      "key": "Medical Assistant", "type": "Diploma", "credential": "Diploma", "area": "health", "order": 1,
+      "en": {
+        "slug": "medical-assistant", "title": "Medical Assistant",
+        "seo_title": "Medical Assistant Diploma Program in Miami | Florida Education Institute",
+        "short": "Clinical and administrative skills for physician offices, clinics, and urgent cares.",
+        "lede": "Clinical and administrative skills for physician offices, clinics, and urgent cares, trained hands-on, hybrid, and close to home.",
+        "length": "In Under a Year", "format": "Hybrid", "format_detail": "Online + externship", "campus": "Miami",
+        "intro_title": "Part clinical, part front office, all care.",
+        "intro": "Medical Assistants are the people patients see first and trust most, taking vitals, assisting with exams and procedures, and keeping a medical office running smoothly on the administrative side. If you want a hands-on healthcare career without years of school, and you like variety in your workday, this program is built for you.",
+        "skills": ["Phlebotomy", "Electrocardiography (EKG/ECG)", "Anatomy and Physiology", "Medical Terminology", "Medical Office Procedures", "Clinical Procedures", "Human Disease and Pathology"],
+        "experience_title": "A real externship, close to home.",
+        "experience": "Classroom knowledge only goes so far. Your program includes a supervised externship at a healthcare site near you, real patients, real procedures, real supervision, so you graduate with actual experience on your resume, not just a certificate.",
+        "careers": ["Medical Assistant (clinical)", "Medical Assistant (administrative)", "Clinical Support Specialist", "Patient Care Coordinator"],
+        "demand": "Healthcare support roles are in steady demand across Miami-Dade clinics, physician offices, and urgent care centers, ask your advisor about current local hiring trends.",
+        "schedule": "Coursework is delivered online so you can study around work and family, with your supervised externship arranged at a site near you in the Miami area. Talk to an advisor about current start dates and class schedules.",
+        "credentials": ["Council on Occupational Education (COE) Accredited"],
+        "why": ["Career-focused training. Every lesson maps to a skill you will actually use on the job.", "Hands-on learning. A real supervised externship, not just simulations.", "Personal support. Small classes and instructors who know your name.", "Instructors with real experience. You learn from people who have worked in the field.", "An established, accredited program. Built and refined for career outcomes."],
+        "quote": "My instructors knew me by name from day one. The externship is what gave me the confidence to walk into my first job interview.",
+        "quote_by": "A recent FEI graduate, Medical Assistant program",
+        "faq": [
+          { "q": "Is the Medical Assistant program hybrid or online?", "a": "It is hybrid, online coursework paired with a supervised externship at a healthcare site near you." },
+          { "q": "Do I need prior healthcare experience?", "a": "No. This program is designed for students starting fresh in healthcare, with training that builds from the fundamentals up." },
+          { "q": "Is financial aid available for this program?", "a": "Yes, for those who qualify, including scholarships and payment plans. An advisor can review your options." }
+        ]
+      },
+      "es": {
+        "slug": "asistente-medico", "title": "Asistente Médico",
+        "seo_title": "Asistente Médico en Miami | Florida Education Institute",
+        "short": "Habilidades clínicas y administrativas para consultorios médicos, clínicas y atención de urgencias.",
+        "lede": "Habilidades clínicas y administrativas para consultorios médicos, clínicas y centros de atención de urgencias, con formación práctica, híbrida y cerca de casa.",
+        "length": "En menos de un año", "format": "Híbrido", "format_detail": "En línea + prácticas", "campus": "Miami",
+        "intro_title": "En parte clínico, en parte oficina de recepción, todo cuidado.",
+        "intro": "Los Asistentes Médicos son las personas que los pacientes ven primero y en quienes más confían: toman los signos vitales, ayudan en exámenes y procedimientos, y mantienen el consultorio funcionando sin problemas en la parte administrativa. Si quieres una carrera práctica en el sector de la salud sin años de estudios, y te gusta la variedad en tu jornada, este programa está hecho para ti.",
+        "skills": ["Flebotomía", "Electrocardiografía (EKG/ECG)", "Anatomía y Fisiología", "Terminología Médica", "Procedimientos de Consultorio Médico", "Procedimientos Clínicos", "Enfermedades Humanas y Patología"],
+        "experience_title": "Prácticas reales, cerca de casa.",
+        "experience": "El conocimiento en el aula solo llega hasta cierto punto. Tu programa incluye prácticas supervisadas en un centro de salud cerca de ti: pacientes reales, procedimientos reales, supervisión real, para que te gradúes con experiencia auténtica en tu currículum, no solo con un certificado.",
+        "careers": ["Asistente Médico (clínico)", "Asistente Médico (administrativo)", "Especialista en Apoyo Clínico", "Coordinador de Atención al Paciente"],
+        "demand": "Los puestos de apoyo en el sector de la salud tienen una demanda constante en las clínicas, consultorios médicos y centros de atención de urgencias de Miami-Dade; pregúntale a tu asesor sobre las tendencias actuales de contratación local.",
+        "schedule": "Las clases se imparten en línea para que puedas estudiar sin descuidar el trabajo y la familia, con tus prácticas supervisadas coordinadas en un centro cerca de ti en el área de Miami. Habla con un asesor sobre las fechas de inicio y los horarios de clases actuales.",
+        "credentials": ["Acreditado por el Council on Occupational Education (COE)"],
+        "why": ["Formación enfocada en tu carrera. Cada lección corresponde a una habilidad que realmente usarás en el trabajo.", "Aprendizaje práctico. Prácticas supervisadas reales, no solo simulaciones.", "Apoyo personalizado. Grupos pequeños e instructores que saben tu nombre.", "Instructores con experiencia real. Aprendes de personas que han trabajado en el campo.", "Un programa establecido y acreditado. Creado y perfeccionado para lograr resultados profesionales."],
+        "quote": "Mis instructores me conocían por mi nombre desde el primer día. Las prácticas fueron lo que me dio la confianza para presentarme a mi primera entrevista de trabajo.",
+        "quote_by": "Una graduada reciente de FEI, Programa de Asistente Médico",
+        "faq": [
+          { "q": "¿El programa de Asistente Médico es híbrido o en línea?", "a": "Es híbrido: clases en línea combinadas con prácticas supervisadas en un centro de salud cerca de ti." },
+          { "q": "¿Necesito experiencia previa en el sector de la salud?", "a": "No. Este programa está diseñado para estudiantes que comienzan desde cero en el sector de la salud, con una formación que se construye desde los fundamentos." },
+          { "q": "¿Hay ayuda financiera disponible para este programa?", "a": "Sí, para quienes califican, incluidas becas y planes de pago. Un asesor puede revisar tus opciones." }
+        ]
+      }
+    },
+    {
+      "key": "Medical Billing & Coding", "type": "Diploma", "credential": "Diploma", "area": "health", "order": 2,
+      "en": {
+        "slug": "medical-billing-coding", "title": "Medical Billing & Coding",
+        "seo_title": "Medical Billing & Coding Diploma Program in Miami | Florida Education Institute",
+        "short": "Manage claims, medical coding, and records that keep healthcare running.",
+        "lede": "Manage claims, medical coding, and records that keep healthcare running, trained online or in Miami, on a schedule that fits your life.",
+        "length": "45 Weeks", "format": "100% Online available", "format_detail": "Flexible format", "campus": "Miami or Online",
+        "intro_title": "The behind-the-scenes work healthcare runs on.",
+        "intro": "Medical Billing and Coding specialists translate patient visits into accurate codes and clean claims, the paperwork that gets providers paid and keeps patient records straight. If you are detail-oriented, comfortable at a computer, and want a healthcare career that does not require clinical work, this program is built for you.",
+        "skills": ["Applied Medical Terminology", "Chart Review for Coding Accuracy", "ICD-10-CM, CPT, and HCPCS Coding", "Insurance Claims Processing and Reimbursement", "Anatomy, Physiology, and Human Disease", "Combined Billing and Coding Training"],
+        "careers": ["Medical Billing Specialist", "Medical Coder", "Insurance Claims Processor", "Health Information Clerk"],
+        "demand": "Billing and coding roles are in steady demand across Miami-Dade clinics, hospitals, and insurance offices, many of them fully remote, ask your advisor about current local hiring trends.",
+        "schedule": "Coursework is available 100% online, so you can study around work and family from anywhere, or attend in Miami if you prefer an in-person environment. Talk to an advisor about current start dates and class schedules.",
+        "credentials": ["Council on Occupational Education (COE) Accredited"],
+        "why": ["Career-focused training. Every lesson maps to a skill you will actually use on the job.", "Flexible, online-friendly format. Study from home or come to Miami, your choice.", "Personal support. Small classes and instructors who know your name.", "Instructors with real experience. You learn from people who have worked in the field.", "An established, accredited program. Built and refined for career outcomes."],
+        "quote": "Studying online meant I could keep my job while I trained. My instructors were always available when I had questions about coding rules.",
+        "quote_by": "A recent FEI graduate, Medical Billing & Coding program",
+        "faq": [
+          { "q": "Can I complete this program fully online?", "a": "Yes. The program is available 100% online, or you can attend in Miami if you prefer in-person classes." },
+          { "q": "Do I need a background in healthcare or coding?", "a": "No. The curriculum starts with medical terminology and builds up to coding systems and claims processing, so no prior experience is required." },
+          { "q": "What kind of jobs can this training lead to?", "a": "Graduates pursue roles like Medical Billing Specialist, Medical Coder, Insurance Claims Processor, and Health Information Clerk in clinics, hospitals, and insurance offices." }
+        ]
+      },
+      "es": { "slug": "facturacion-y-codificacion-medica", "title": "Facturación y Codificación Médica", "short": "Gestiona reclamaciones, codificación médica y registros que mantienen la salud en marcha.", "es_detail_pending": true }
+    },
+    {
+      "key": "Pharmacy Technician", "type": "Diploma", "credential": "Diploma", "area": "health", "order": 3,
+      "en": {
+        "slug": "pharmacy-technician", "title": "Pharmacy Technician",
+        "seo_title": "Pharmacy Technician Diploma Program in Miami | Florida Education Institute",
+        "short": "Support pharmacists in dispensing medication and caring for patients.",
+        "lede": "Support pharmacists in dispensing medication and caring for patients, trained hands-on, hybrid, and close to home.",
+        "length": "46 Weeks", "format": "Hybrid", "format_detail": "Online + supervised externship", "campus": "Miami",
+        "intro_title": "Precision, care, and a steady pace.",
+        "intro": "Pharmacy Technicians work alongside pharmacists to prepare and dispense medication safely and accurately, collecting prescription data, managing inventory, and helping patients get what they need when they need it. If you are detail-oriented, like the structure of a pharmacy setting, and want a healthcare career without years of school, this program is built for you.",
+        "skills": ["Prescription Data Collection and Processing", "Assisting in Medication Preparation", "Prescription Measuring, Packaging, and Labeling", "Inventory Management and Insurance Processing", "Pharmacy Software Systems", "Supervised Externship Near Home"],
+        "experience_title": "A real externship, close to home.",
+        "experience": "Classroom knowledge only goes so far. Your program includes a supervised externship at a pharmacy site near you, real prescriptions, real patients, real supervision, so you graduate with actual experience on your resume, not just a certificate.",
+        "careers": ["Pharmacy Technician (retail)", "Pharmacy Technician (hospital)", "Pharmacy Support Staff"],
+        "demand": "Pharmacy support roles are in steady demand across Miami-Dade retail pharmacies and hospitals, which are actively hiring locally, ask your advisor about current local hiring trends.",
+        "schedule": "Coursework is delivered online so you can study around work and family, with your supervised externship arranged at a pharmacy site near you in the Miami area. Talk to an advisor about current start dates and class schedules.",
+        "credentials": ["Council on Occupational Education (COE) Accredited", "Florida Board of Pharmacy registration support"],
+        "why": ["Career-focused training. Every lesson maps to a skill you will actually use on the job.", "Hands-on learning. A real supervised externship, not just simulations.", "Personal support. Small classes and instructors who know your name.", "Instructors with real experience. You learn from people who have worked in the field.", "An established, accredited program. Built and refined for career outcomes."],
+        "quote": "The hands-on practice with real prescriptions made all the difference. By the time my externship ended, I felt ready to walk into a pharmacy and start working.",
+        "quote_by": "A recent FEI graduate, Pharmacy Technician program",
+        "faq": [
+          { "q": "Will I need to handle real prescriptions during training?", "a": "Yes, your supervised externship takes place at a pharmacy site near you, where you will practice prescription processing and medication preparation under real supervision." },
+          { "q": "Do I need prior pharmacy or healthcare experience?", "a": "No. This program is designed for students starting fresh in pharmacy, with training that builds from the fundamentals up." },
+          { "q": "Does this program help with Florida Board of Pharmacy registration?", "a": "Yes, your training supports the requirements for Florida Board of Pharmacy registration. An advisor can walk you through the specifics for your situation." }
+        ]
+      },
+      "es": { "slug": "tecnico-de-farmacia", "title": "Técnico de Farmacia", "short": "Apoya a los farmacéuticos en la dispensación de medicamentos y el cuidado de los pacientes.", "es_detail_pending": true }
+    },
+    {
+      "key": "Medical Office Administrator", "type": "Associate Degree", "credential": "A.A.S.", "area": "health", "order": 4,
+      "en": {
+        "slug": "medical-office-administrator", "title": "Medical Office Administrator",
+        "seo_title": "Medical Office Administrator A.A.S. Associate of Applied Science Program in Miami | Florida Education Institute",
+        "short": "An associate degree in the business and operations of modern healthcare.",
+        "lede": "An associate degree in the business and operations of modern healthcare, trained hybrid, hands-on, and close to home.",
+        "length": "82 Weeks", "format": "Hybrid", "format_detail": "Online + on-campus instruction", "campus": "Miami",
+        "intro_title": "The business side of patient care.",
+        "intro": "Medical Office Administrators keep healthcare running behind the scenes, managing records, billing, insurance claims, and the daily operations that let clinicians focus on patients. If you are organized, like problem-solving, and want a healthcare career built around business and administration rather than clinical work, this associate degree is designed for you.",
+        "skills": ["Medical Office Procedures", "Medical Terminology", "Anatomy and Physiology", "Medical Billing and Coding", "Electronic Health Records", "Insurance Claims and Reimbursement", "Healthcare Office Administration", "Patient Communication and Customer Service", "Medical Law, Ethics, and Office Compliance"],
+        "careers": ["Medical Office Administrator", "Healthcare Office Manager", "Medical Records Coordinator", "Patient Services Supervisor"],
+        "demand": "Healthcare administration roles are in steady demand across Miami-Dade clinics, physician offices, and healthcare facilities, ask your advisor about current local hiring trends.",
+        "schedule": "Coursework is delivered in a hybrid format, combining online study with on-campus instruction at our Miami campus, so you can build your degree around work and family. Talk to an advisor about current start dates and class schedules.",
+        "credentials": ["Council on Occupational Education (COE) Accredited"],
+        "why": ["Career-focused training. Every lesson maps to a skill you will actually use on the job.", "Business and healthcare, combined. A curriculum built around how real medical offices operate.", "Personal support. Small classes and instructors who know your name.", "Instructors with real experience. You learn from people who have worked in the field.", "An established, accredited program. Built and refined for career outcomes."],
+        "quote": "My instructors knew me by name from day one. The program gave me the confidence to run a real medical office, not just understand one on paper.",
+        "quote_by": "A recent FEI graduate, Medical Office Administrator program",
+        "faq": [
+          { "q": "Is the Medical Office Administrator program a degree or a certificate?", "a": "It is an A.A.S. Associate of Applied Science degree, a two-year-level credential focused on healthcare business and office operations." },
+          { "q": "Will I work directly with patients, or mostly behind the scenes?", "a": "This program is focused on the administrative and business side of healthcare, records, billing, insurance, and office operations, with patient communication skills woven throughout, rather than hands-on clinical care." },
+          { "q": "Is financial aid available for this program?", "a": "Yes, for those who qualify, including scholarships and payment plans. An advisor can review your options." }
+        ]
+      },
+      "es": { "slug": "administrador-de-oficina-medica", "title": "Administrador de Oficina Médica", "short": "Un grado asociado en la administración y las operaciones de la salud moderna.", "es_detail_pending": true }
+    },
+    {
+      "key": "Culinary Arts", "type": "Diploma", "credential": "Diploma", "area": "culinary", "order": 5,
+      "en": {
+        "slug": "culinary-arts", "title": "Culinary Arts",
+        "seo_title": "Culinary Arts Diploma Program in Miami | Florida Education Institute",
+        "short": "Professional cooking technique, kitchen leadership, and real-service experience.",
+        "lede": "Professional cooking technique, kitchen leadership, and real-service experience, trained hands-on, in-person, in the heart of Coral Gables.",
+        "length": "36 Weeks", "format": "In-Person", "format_detail": "Hands-on kitchen training", "campus": "Coral Gables",
+        "intro_title": "Part technique, part timing, all craft.",
+        "intro": "Culinary Arts graduates run the line, prep for service, and keep a kitchen moving under pressure, knife skills, technique, and food safety all working together in real time. If you want a hands-on career built around real cooking, not just recipes on paper, and you thrive in a fast-paced kitchen environment, this program is built for you.",
+        "skills": ["Culinary Fundamentals and Knife Skills", "International Cooking Techniques", "Latin American Cuisine", "Baking and Pastry Basics", "Kitchen Management and Food Safety", "Menu Development and Plating", "Culinary Nutrition"],
+        "careers": ["Line Cook", "Prep Cook", "Kitchen Supervisor", "Sous Chef (entry path)"],
+        "demand": "Trained kitchen talent is in steady demand across Miami-Dade restaurants, hotels, and catering operations, ask your advisor about current local hiring trends.",
+        "schedule": "Training is hands-on and in-person at our Coral Gables campus, where you will work in real kitchen conditions from day one. Talk to an advisor about current start dates and class schedules.",
+        "credentials": ["Council on Occupational Education (COE) Accredited"],
+        "why": ["Career-focused training. Every lesson maps to a skill you will actually use on the line.", "Hands-on learning. Real kitchen time, not just demonstrations.", "Personal support. Small classes and instructors who know your name.", "Instructors with real experience. You learn from people who have worked in professional kitchens.", "An established, accredited program. Built and refined for career outcomes."],
+        "quote": "I walked in barely knowing my way around a kitchen. By the time I finished, I could run a station under real pressure, that is the difference this program made.",
+        "quote_by": "A recent FEI graduate, Culinary Arts program",
+        "faq": [
+          { "q": "Do I need previous cooking experience to enroll?", "a": "No. This program starts with knife skills and culinary fundamentals, so you build a real foundation before moving into more advanced technique." },
+          { "q": "Is the training online or in the kitchen?", "a": "It is hands-on and in-person at our Coral Gables campus, you will be working in a real kitchen environment, not watching videos." },
+          { "q": "What kind of jobs can this program lead to?", "a": "Graduates commonly move into roles like line cook, prep cook, and kitchen supervisor, with an entry path toward sous chef as you gain experience." }
+        ]
+      },
+      "es": { "slug": "artes-culinarias", "title": "Artes Culinarias", "short": "Técnica de cocina profesional, liderazgo de cocina y experiencia de servicio real.", "es_detail_pending": true }
+    },
+    {
+      "key": "Culinary & Hospitality Management", "type": "Associate Degree", "credential": "A.A.S.", "area": "culinary", "order": 6,
+      "en": {
+        "slug": "culinary-hospitality-management", "title": "Culinary & Hospitality Management",
+        "seo_title": "Culinary & Hospitality Management A.A.S. Program in Miami | Florida Education Institute",
+        "short": "Professional cooking paired with restaurant and hospitality leadership.",
+        "lede": "Combine professional cooking with restaurant and hospitality leadership, trained hands-on, hybrid, and close to home.",
+        "length": "75 Weeks", "format": "Hybrid", "format_detail": "Online + hands-on kitchen training", "campus": "Coral Gables",
+        "intro_title": "Part kitchen, part front of house, all craft.",
+        "intro": "Culinary and hospitality professionals bring together two skills that restaurants and hotels cannot run without, great food and great service. You will learn to cook with real technique and confidence, and to lead a kitchen or a guest-facing team with the same care. If you want a career where every day is hands-on and no two shifts are the same, this program is built for you.",
+        "skills": ["Culinary Fundamentals and Knife Skills", "Food Safety, Sanitation, and Kitchen Rules", "International, Latin, and Classical Cooking Techniques", "Baking and Pastry Fundamentals", "Menu Planning, Nutrition, and Food Preparation", "Restaurant Operations and Food Service Management", "Hospitality Services and Guest Relations", "Customer Service and Customer Loyalty", "Leadership, Teamwork, and Professional Work Ethic"],
+        "careers": ["Restaurant Shift Supervisor", "Hospitality Coordinator", "Food Service Manager (entry path)", "Kitchen Manager"],
+        "demand": "Restaurants, hotels, and hospitality groups across Miami-Dade are in steady demand for trained kitchen and guest-service talent, ask your advisor about current local hiring trends.",
+        "schedule": "Coursework is delivered in a hybrid format so you can study around work and family, with hands-on kitchen and hospitality training at our Coral Gables campus. Talk to an advisor about current start dates and class schedules.",
+        "credentials": ["Council on Occupational Education (COE) Accredited"],
+        "why": ["Career-focused training. Every lesson maps to a skill you will actually use on the job.", "Hands-on learning. Real kitchen practice and hospitality training, not just theory.", "Personal support. Small classes and instructors who know your name.", "Instructors with real experience. You learn from people who have worked in the industry.", "An established, accredited program. Built and refined for career outcomes."],
+        "quote": "I came in only knowing how to cook for my family. I left knowing how to run a kitchen, and how to lead the people in it.",
+        "quote_by": "A recent FEI graduate, Culinary & Hospitality Management program",
+        "faq": [
+          { "q": "Do I need previous cooking experience to enroll?", "a": "No. The program starts with knife skills and kitchen fundamentals, so you build your technique from the ground up." },
+          { "q": "Does this program cover hospitality and guest service, or just cooking?", "a": "Both. Alongside culinary technique, you will study restaurant operations, hospitality services, and customer service so you are prepared for kitchen and front-of-house leadership roles." },
+          { "q": "What credential do I earn, and how long does it take?", "a": "You will earn an A.A.S. Associate of Applied Science, over 75 weeks of hybrid training at our Coral Gables campus." }
+        ]
+      },
+      "es": { "slug": "gestion-culinaria-y-hospitalidad", "title": "Gestión Culinaria y Hospitalidad", "short": "Cocina profesional junto con liderazgo en restaurantes y hospitalidad.", "es_detail_pending": true }
+    },
+    {
+      "key": "Pastry & Baking Arts", "type": "Diploma", "credential": "Diploma", "area": "culinary", "order": 7,
+      "en": {
+        "slug": "pastry-baking-arts", "title": "Pastry & Baking Arts",
+        "seo_title": "Pastry & Baking Arts Diploma Program in Miami | Florida Education Institute",
+        "short": "Artisan breads, desserts, and pastry craft, from fundamentals to finesse.",
+        "lede": "Artisan breads, desserts, and pastry craft, from fundamentals to finesse, trained hands-on at our Coral Gables campus.",
+        "length": "36 Weeks", "format": "Hands-On", "format_detail": "In-person training", "campus": "Coral Gables",
+        "intro_title": "Part precision, part artistry, all craft.",
+        "intro": "Pastry and baking professionals turn flour, sugar, and butter into something people remember, artisan loaves, celebration cakes, and desserts that are as much about technique as they are about taste. If you like working with your hands, care about detail, and want a creative trade you can build a career on, this program is built for you.",
+        "skills": ["Sugar Arts and Confection", "Artisan Bread Baking", "International Pastries", "Dessert Decorating", "Chocolate Art and Techniques", "Modern Pastries", "Dessert Presentation"],
+        "careers": ["Pastry Cook", "Baker", "Cake Decorator", "Bakery Team Member"],
+        "demand": "Bakeries, pastry shops, hotels, and restaurants across Miami-Dade are actively hiring locally trained pastry talent, ask your advisor about current openings near you.",
+        "schedule": "Training happens hands-on and in-person at our Coral Gables campus, in working kitchens with real ovens, tools, and ingredients, not a screen. Talk to an advisor about current start dates and class schedules.",
+        "credentials": ["Council on Occupational Education (COE) Accredited"],
+        "why": ["Career-focused training. Every lesson maps to a skill you will actually use in a working kitchen.", "Hands-on learning. Real kitchens, real ingredients, real repetition, not just theory.", "Personal support. Small classes and instructors who know your name.", "Instructors with real experience. You learn from people who have worked in the field.", "An established, accredited program. Built and refined for career outcomes."],
+        "quote": "I came in barely knowing how to bake a cake and left able to plate a dessert I was actually proud of. The instructors pushed me to slow down and get the technique right.",
+        "quote_by": "A recent FEI graduate, Pastry & Baking Arts program",
+        "faq": [
+          { "q": "Do I need prior baking experience to enroll?", "a": "No. This program is designed for students starting fresh, with training that builds from basic techniques up to advanced pastry and confection work." },
+          { "q": "Is the training online or in-person?", "a": "It is fully hands-on and in-person at our Coral Gables campus. Pastry and baking skills are built through repetition in a real kitchen, not through videos." },
+          { "q": "Is financial aid available for this program?", "a": "Yes, for those who qualify, including scholarships and payment plans. An advisor can review your options." }
+        ]
+      },
+      "es": { "slug": "reposteria-y-panaderia", "title": "Repostería y Panadería", "short": "Panes artesanales, postres y repostería, desde los fundamentos hasta el detalle.", "es_detail_pending": true }
+    },
+    {
+      "key": "Pastry & Baking Management", "type": "Associate Degree", "credential": "A.A.S.", "area": "culinary", "order": 8,
+      "en": {
+        "slug": "pastry-baking-management", "title": "Pastry & Baking Management",
+        "seo_title": "Pastry & Baking Management A.A.S. Program in Miami | Florida Education Institute",
+        "short": "Pastry craft plus the business skills to run a bakery or pastry program.",
+        "lede": "Pastry craft plus the business and leadership skills to run a bakery or pastry program, trained hands-on, hybrid, and close to home.",
+        "length": "75 Weeks", "format": "Hybrid", "format_detail": "Online + hands-on kitchen training", "campus": "Coral Gables",
+        "intro_title": "Part craft, part leadership, all pastry.",
+        "intro": "Pastry & Baking Management goes beyond the bench, you will master the techniques behind breads, cakes, chocolate, and desserts, then build the leadership, teamwork, and business sense it takes to run a pastry program or bakery. If you want a creative, hands-on career in food with a real path into management, this program is built for you.",
+        "skills": ["Fundamental Pastry and Baking Techniques", "Artisan Breads", "Cakes, Fillings, and Desserts", "Chocolate, Sugar Arts, and Confections", "International and Modern Desserts", "Dessert Decorating and Presentation", "Food Safety, Sanitation, and Kitchen Rules", "Nutrition, Customer Service, and Hospitality", "Leadership, Teamwork, and Professional Ethics"],
+        "careers": ["Pastry Shop Supervisor", "Bakery Manager (entry path)", "Head Baker", "Pastry Program Coordinator"],
+        "demand": "Skilled pastry and baking talent is in steady demand across Miami-Dade bakeries, hotels, and restaurants, ask your advisor about current local hiring trends.",
+        "schedule": "Coursework is delivered in a hybrid format so you can study around work and family, with hands-on kitchen training at our Coral Gables campus. Talk to an advisor about current start dates and class schedules.",
+        "credentials": ["Council on Occupational Education (COE) Accredited"],
+        "why": ["Career-focused training. Every lesson maps to a skill you will actually use on the job, from technique to team leadership.", "Hands-on learning. Real kitchen practice, not just theory or videos.", "Personal support. Small classes and instructors who know your name.", "Instructors with real experience. You learn from people who have worked in professional kitchens and bakeries.", "An established, accredited program. Built and refined for career outcomes."],
+        "quote": "I came in knowing how to bake at home. I left knowing how to run a pastry kitchen, the ordering, the team, the standards, all of it.",
+        "quote_by": "A recent FEI graduate, Pastry & Baking Management program",
+        "faq": [
+          { "q": "Do I need prior baking experience to enroll?", "a": "No. This program is designed for students starting fresh, with training that builds from fundamental techniques up to advanced pastry and management skills." },
+          { "q": "What credential will I earn?", "a": "You will earn an A.A.S. Associate of Applied Science, in Pastry & Baking Management." },
+          { "q": "Does this program cover business and management skills, or just baking?", "a": "Both. Alongside pastry and baking technique, you will study leadership, teamwork, and professional ethics so you are prepared to supervise a pastry shop or bakery, not just work the line." }
+        ]
+      },
+      "es": { "slug": "gestion-de-reposteria-y-panaderia", "title": "Gestión de Repostería y Panadería", "short": "Repostería más las habilidades de negocio para dirigir una panadería o repostería.", "es_detail_pending": true }
+    },
+    {
+      "key": "HVAC / R", "type": "Diploma", "credential": "Diploma", "area": "trades", "order": 9,
+      "en": {
+        "slug": "hvac", "title": "HVAC/R",
+        "seo_title": "HVAC/R Diploma Program in Miami | Florida Education Institute",
+        "short": "Air conditioning, heating, and refrigeration systems South Florida depends on.",
+        "lede": "Air conditioning, heating, and refrigeration systems South Florida depends on, trained hands-on, in real labs, with real equipment.",
+        "length": "36 Weeks", "format": "Hands-On Lab", "format_detail": "Training format", "campus": "Miami",
+        "intro_title": "Keep South Florida cool, warm, and running.",
+        "intro": "HVAC/R technicians install, maintain, and repair the air conditioning, heating, and refrigeration systems that homes and businesses cannot do without, especially here in Miami. If you like working with your hands, solving mechanical problems, and want a trade that is always in demand, this program is built for you.",
+        "skills": ["Installing, Maintaining, and Repairing Residential and Commercial HVAC/R Systems", "Safe Practices with A/C and Refrigeration Equipment", "Diagnosing Mechanical and Performance Issues", "Electrical Systems, Controls, and Basic System Design", "EPA and R-410A Certification Exam Preparation", "Hands-On Lab Training with Industry Equipment"],
+        "careers": ["HVAC/R Installer", "HVAC/R Service Technician", "Refrigeration Technician", "Maintenance Technician"],
+        "demand": "HVAC/R technicians are in steady demand across Miami-Dade, from residential service companies to commercial and refrigeration contractors actively hiring locally. Ask your advisor about current local hiring trends.",
+        "schedule": "Training is hands-on lab work at our Miami campus, where you will work directly with the tools and equipment used on the job. Talk to an advisor about current start dates and class schedules.",
+        "credentials": ["Council on Occupational Education (COE) Accredited", "EPA Certification exam prep", "R-410A Certification exam prep"],
+        "why": ["Career-focused training. Every lesson maps to a skill you will actually use on the job.", "Hands-on learning. Real lab time with the equipment techs use in the field, not just lectures.", "Personal support. Small classes and instructors who know your name.", "Instructors with real experience. You learn from people who have worked in the trade.", "An established, accredited program. Built and refined for career outcomes."],
+        "quote": "The lab time made all the difference, by graduation I would already worked with the same equipment I use on the job every day.",
+        "quote_by": "A recent FEI graduate, HVAC/R program",
+        "faq": [
+          { "q": "Do I need mechanical experience to start the HVAC/R program?", "a": "No. This program is designed for students starting fresh in the trade, building from the fundamentals up through hands-on lab work." },
+          { "q": "Does the program prepare me for EPA and R-410A certification exams?", "a": "Yes. Exam preparation for both the EPA certification and R-410A certification is built into the curriculum." },
+          { "q": "Where does the hands-on lab training take place?", "a": "Lab training takes place at our Miami campus, working directly with the industry equipment techs use on the job." }
+        ]
+      },
+      "es": { "slug": "climatizacion-y-refrigeracion", "title": "Climatización y Refrigeración (HVAC/R)", "short": "Sistemas de aire acondicionado, calefacción y refrigeración de los que depende el sur de la Florida.", "es_detail_pending": true }
+    },
+    {
+      "key": "Business Management", "type": "Diploma", "credential": "Diploma", "area": "business", "order": 10,
+      "en": {
+        "slug": "business-management", "title": "Business Management",
+        "seo_title": "Business Management Diploma Program in Miami | Florida Education Institute",
+        "short": "Foundations of management, operations, and leadership to run and grow a business.",
+        "lede": "Foundations of management, operations, and leadership to run and grow a business, trained 100% online, on your schedule.",
+        "length": "45 Weeks", "format": "100% Online", "format_detail": "Format", "campus": "Online",
+        "intro_title": "Run the operations. Lead the people.",
+        "intro": "Business Management is built for people who want to understand how a business actually works, from the people side to the numbers side, and who want to be the one others turn to for direction. If you are looking to move into a supervisory role, support day-to-day operations, or eventually run something of your own, this program gives you the practical grounding to do it.",
+        "skills": ["Entrepreneurship", "Principles of Todays Business", "Managing People and Human Resources", "Leadership and Management Styles", "Setting Goals and Business Strategies", "Marketing and Sales", "Accounting and Financial Markets", "Business Communication and Technology", "Legal, Regulatory, and Government Perspectives"],
+        "careers": ["Business Operations Assistant", "Team Lead / Supervisor", "Small Business Owner", "Office Manager"],
+        "demand": "Businesses across every industry are actively hiring locally for people who can keep operations organized and teams on track, ask your advisor about current local hiring trends.",
+        "schedule": "This program is delivered 100% online, so you can study around work and family from wherever you are. Talk to an advisor about current start dates and class schedules.",
+        "credentials": ["Council on Occupational Education (COE) Accredited"],
+        "why": ["Career-focused training. Every lesson maps to a skill you will actually use on the job.", "Learn on your schedule. A 100% online format built around work and family, not against it.", "Personal support. Small classes and instructors who know your name.", "Instructors with real experience. You learn from people who have worked in the field.", "An established, accredited program. Built and refined for career outcomes."],
+        "quote": "Studying online meant I could keep working while I learned. What I picked up about managing people I use every single day.",
+        "quote_by": "A recent FEI graduate, Business Management program",
+        "faq": [
+          { "q": "Is the Business Management program fully online?", "a": "Yes, this program is delivered 100% online, so you can study from home on a schedule that works around your job and family." },
+          { "q": "Do I need previous business experience to enroll?", "a": "No. The curriculum starts with the fundamentals, from entrepreneurship basics to managing people, so you build up your knowledge step by step." },
+          { "q": "What kind of roles can this diploma lead to?", "a": "Graduates pursue roles such as Business Operations Assistant, Team Lead/Supervisor, Office Manager, or use the training to run their own small business." }
+        ]
+      },
+      "es": { "slug": "gestion-empresarial", "title": "Gestión Empresarial", "short": "Fundamentos de administración, operaciones y liderazgo para dirigir y hacer crecer un negocio.", "es_detail_pending": true }
+    },
+    {
+      "key": "Business Administration", "type": "Associate Degree", "credential": "A.A.S.", "area": "business", "order": 11,
+      "en": {
+        "slug": "business-administration", "title": "Business Administration",
+        "seo_title": "Business Administration A.A.S. Associate of Applied Science Program in Miami | Florida Education Institute",
+        "short": "A deeper foundation in business leadership, management, and entrepreneurship.",
+        "lede": "A deeper foundation in business leadership, management, and entrepreneurship, trained close to home, on the schedule that fits your life.",
+        "length": "84 Weeks", "format": "Flexible", "format_detail": "Traditional, hybrid, or online", "campus": "Miami",
+        "intro_title": "Lead teams, run operations, build a business.",
+        "intro": "Business Administration graduates step into the roles that keep a company moving, supervising people, managing budgets, coordinating operations, and making the calls that departments depend on. If you want a well-rounded business education that covers management, marketing, finance, and the practical skills to run something of your own, this program is built for you.",
+        "skills": ["Business Principles and Practices", "Entrepreneurship and Small Business Development", "Management, Supervision, and Leadership", "Human Resources and Managing People", "Business Communication and Professional Work Ethic", "Marketing, Sales, and Customer Loyalty", "Accounting, Financial Markets, and Economics", "Computer Applications and Business Technology", "Business Law, Ethics, and Government Perspectives"],
+        "careers": ["Business Operations Manager (entry path)", "Administrative Supervisor", "Account Coordinator", "Entrepreneur / Small Business Owner"],
+        "demand": "Business and administrative roles are in steady demand across Miami-Dade companies, small businesses, and growing industries, ask your advisor about current local hiring trends.",
+        "schedule": "Study the way that works best for you, traditional in-person classes, a hybrid mix, or fully online, all on our Miami campus schedule. Talk to an advisor about current start dates and class schedules.",
+        "credentials": ["Council on Occupational Education (COE) Accredited"],
+        "why": ["Career-focused training. Every lesson maps to a skill you will actually use on the job.", "Flexible formats. Traditional, hybrid, or online, you choose what fits your life.", "Personal support. Small classes and instructors who know your name.", "Instructors with real experience. You learn from people who have worked in business.", "An established, accredited program. Built and refined for career outcomes."],
+        "quote": "The program gave me the confidence and the vocabulary to actually run things, not just talk about business, but manage it.",
+        "quote_by": "A recent FEI graduate, Business Administration program",
+        "faq": [
+          { "q": "What can I do with an A.A.S. in Business Administration?", "a": "It prepares you for entry-level supervisory and administrative roles, and gives you a practical foundation if you plan to run your own business." },
+          { "q": "Can I study Business Administration fully online?", "a": "Yes. This program is offered in traditional, hybrid, or fully online formats, so you can choose what fits your schedule." },
+          { "q": "Do I need prior business experience to enroll?", "a": "No. The curriculum starts with core business fundamentals and builds up to management, HR, marketing, and accounting, no experience required." }
+        ]
+      },
+      "es": { "slug": "administracion-de-empresas", "title": "Administración de Empresas", "short": "Una base más profunda en liderazgo empresarial, gestión y emprendimiento.", "es_detail_pending": true }
+    }
+  ]
+}

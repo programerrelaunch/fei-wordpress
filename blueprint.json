@@ -1,0 +1,49 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "FEI.edu on WordPress — demo",
+    "description": "Florida Education Institute: fei-core plugin + Kadence child theme, Polylang en/es, 11 programs, lead intake, landing pages.",
+    "author": "programerrelaunch",
+    "categories": ["Education", "Demo"]
+  },
+  "landingPage": "/",
+  "preferredVersions": { "php": "8.2", "wp": "latest" },
+  "features": { "networking": true },
+  "login": true,
+  "steps": [
+    { "step": "setSiteOptions", "options": { "blogname": "Florida Education Institute", "permalink_structure": "/%postname%/" } },
+    {
+      "step": "installTheme",
+      "themeData": { "resource": "wordpress.org/themes", "slug": "kadence" },
+      "options": { "activate": false }
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": { "resource": "wordpress.org/plugins", "slug": "polylang" },
+      "options": { "activate": true }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/fei-setup.php",
+      "data": { "resource": "url", "url": "https://raw.githubusercontent.com/programerrelaunch/fei-wordpress/main/playground/setup.php" }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php define('FEI_SETUP_STAGE','languages'); require '/wordpress/fei-setup.php';"
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": { "resource": "url", "url": "https://raw.githubusercontent.com/programerrelaunch/fei-wordpress/main/dist/fei-core.zip" },
+      "options": { "activate": true }
+    },
+    {
+      "step": "installTheme",
+      "themeData": { "resource": "url", "url": "https://raw.githubusercontent.com/programerrelaunch/fei-wordpress/main/dist/fei-kadence-child.zip" },
+      "options": { "activate": true }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php define('FEI_SETUP_STAGE','site'); require '/wordpress/fei-setup.php';"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+# Internal audit material (names a third-party staging host and an admin account) stays local.
+AUDIT.md
+migration/
+
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
+
+# Build intermediates
+node_modules/
+*.log
