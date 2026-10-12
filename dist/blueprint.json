@@ -1,0 +1,62 @@
+{
+    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+    "landingPage": "/",
+    "preferredVersions": {
+        "php": "8.2",
+        "wp": "latest"
+    },
+    "features": {
+        "networking": true
+    },
+    "login": true,
+    "steps": [
+        {
+            "step": "login",
+            "username": "admin",
+            "password": "password"
+        },
+        {
+            "step": "installTheme",
+            "themeData": {
+                "resource": "wordpress.org/themes",
+                "slug": "kadence"
+            },
+            "options": {
+                "activate": false
+            }
+        },
+        {
+            "step": "installPlugin",
+            "pluginData": {
+                "resource": "url",
+                "url": "https://raw.githubusercontent.com/programerrelaunch/fei-wp-playground-demo/653359cb51ab22ac5a84bbc647fdff23089a637c/fei-core.zip"
+            },
+            "options": {
+                "activate": false
+            }
+        },
+        {
+            "step": "installTheme",
+            "themeData": {
+                "resource": "url",
+                "url": "https://raw.githubusercontent.com/programerrelaunch/fei-wp-playground-demo/d90a77eaee1e8a4d9884214757a56e4b17c9b7f2/fei-kadence-child.zip"
+            },
+            "options": {
+                "activate": true
+            }
+        },
+        {
+            "step": "activatePlugin",
+            "pluginPath": "fei-core/fei-core.php"
+        },
+        {
+            "step": "writeFile",
+            "path": "/tmp/fei-setup-demo.php",
+            "data": "<?php\r\n/**\r\n * Playground / demo bootstrap: front page, apply page, publish program LPs.\r\n * Loaded by the WordPress Playground blueprint (runPHP).\r\n */\r\nrequire_once '/wordpress/wp-load.php';\r\n\r\nupdate_option( 'blogname', 'Florida Education Institute' );\r\nupdate_option( 'blogdescription', 'Career-focused education in Miami' );\r\nupdate_option( 'permalink_structure', '/%postname%/' );\r\nupdate_option( 'timezone_string', 'America/New_York' );\r\nupdate_option( 'blog_public', '0' ); // demo: discourage indexing of the sandbox\r\nupdate_option( 'show_on_front', 'page' );\r\n\r\n$home_pat  = array();\r\n$apply_pat = array();\r\n$child     = get_theme_root() . '/fei-kadence-child/patterns';\r\nif ( is_readable( $child . '/home-en.php' ) ) {\r\n\t$home_pat = include $child . '/home-en.php';\r\n}\r\nif ( is_readable( $child . '/apply-en.php' ) ) {\r\n\t$apply_pat = include $child . '/apply-en.php';\r\n}\r\n\r\n$home_id = wp_insert_post(\r\n\tarray(\r\n\t\t'post_title'   => 'Home',\r\n\t\t'post_name'    => 'home',\r\n\t\t'post_status'  => 'publish',\r\n\t\t'post_type'    => 'page',\r\n\t\t'post_content' => is_array( $home_pat ) && ! empty( $home_pat['content'] ) ? $home_pat['content'] : '<!-- wp:shortcode -->[fei_programs_grid]<!-- /wp:shortcode -->',\r\n\t)\r\n);\r\n$apply_id = wp_insert_post(\r\n\tarray(\r\n\t\t'post_title'   => 'Apply Now',\r\n\t\t'post_name'    => 'apply',\r\n\t\t'post_status'  => 'publish',\r\n\t\t'post_type'    => 'page',\r\n\t\t'post_content' => is_array( $apply_pat ) && ! empty( $apply_pat['content'] ) ? $apply_pat['content'] : '<!-- wp:shortcode -->[fei_apply_form]<!-- /wp:shortcode -->',\r\n\t)\r\n);\r\n\r\nif ( $home_id && ! is_wp_error( $home_id ) ) {\r\n\tupdate_option( 'page_on_front', (int) $home_id );\r\n}\r\n\r\nif ( class_exists( 'FEI_Landing' ) ) {\r\n\tFEI_Landing::generate();\r\n\t$lps = get_posts(\r\n\t\tarray(\r\n\t\t\t'post_type'   => 'fei_landing',\r\n\t\t\t'post_status' => 'draft',\r\n\t\t\t'numberposts' => -1,\r\n\t\t)\r\n\t);\r\n\tforeach ( $lps as $lp ) {\r\n\t\twp_update_post( array( 'ID' => $lp->ID, 'post_status' => 'publish' ) );\r\n\t}\r\n}\r\n\r\nif ( class_exists( 'FEI_Programs' ) ) {\r\n\tFEI_Programs::register_post_types();\r\n}\r\n\r\n$menu_id = wp_create_nav_menu( 'Primary' );\r\nif ( $menu_id && ! is_wp_error( $menu_id ) ) {\r\n\twp_update_nav_menu_item(\r\n\t\t$menu_id,\r\n\t\t0,\r\n\t\tarray(\r\n\t\t\t'menu-item-title'  => 'Programs',\r\n\t\t\t'menu-item-url'    => home_url( '/programs/' ),\r\n\t\t\t'menu-item-status' => 'publish',\r\n\t\t)\r\n\t);\r\n\twp_update_nav_menu_item(\r\n\t\t$menu_id,\r\n\t\t0,\r\n\t\tarray(\r\n\t\t\t'menu-item-title'     => 'Apply Now',\r\n\t\t\t'menu-item-object'    => 'page',\r\n\t\t\t'menu-item-object-id' => (int) $apply_id,\r\n\t\t\t'menu-item-type'      => 'post_type',\r\n\t\t\t'menu-item-status'    => 'publish',\r\n\t\t)\r\n\t);\r\n\t$locations           = get_theme_mod( 'nav_menu_locations', array() );\r\n\t$locations['primary'] = (int) $menu_id;\r\n\tset_theme_mod( 'nav_menu_locations', $locations );\r\n}\r\n\r\nflush_rewrite_rules( false );\r\necho 'FEI demo ready';\r\n"
+        },
+        {
+            "step": "runPHP",
+            "code": "<?php require \"/tmp/fei-setup-demo.php\";"
+        }
+    ]
+}

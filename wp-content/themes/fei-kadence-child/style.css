@@ -4,7 +4,7 @@ Theme URI:    https://fei.edu/
 Template:     kadence
 Author:       FEI Web Team
 Description:  Florida Education Institute child theme. Maps the fei.edu design system (Montserrat, navy/gold/blue, square corners, dark gradient bands) onto Kadence and ships the home/utility-bar patterns. Functional logic lives in the fei-core plugin.
-Version:      1.0.0
+Version:      1.1.0
 Requires at least: 6.4
 Requires PHP: 8.1
 License:      GNU General Public License v2 or later
@@ -76,3 +76,87 @@ h1,h2,h3,h4,.site-title{font-family:var(--global-heading-font-family);font-weigh
 
 /* Focus ring parity */
 :where(a,button,input,select,textarea,[tabindex]):focus-visible{outline:3px solid var(--fei-gold);outline-offset:2px}
+
+/* ========== 1.1 UI polish — campus catalog, not generic Kadence ========== */
+.fei-brand{--fei-hair:4px}
+.fei-brand::before{content:"";display:block;height:var(--fei-hair);background:var(--fei-gold);position:relative;z-index:100}
+
+/* Grain + atmosphere on dark planes (no extra image files) */
+.fei-hero,.fei-dark,.site-footer-wrap,.cta{
+	background-image:
+		radial-gradient(1200px 480px at 12% -10%,#ffb81d22,transparent 55%),
+		radial-gradient(900px 420px at 92% 110%,#0072ce33,transparent 50%);
+}
+.fei-hero::after,.fei-dark::after{
+	content:"";position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.22;
+	background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.fei-hero .wp-block-cover__inner-container,.fei-dark .wp-block-group,.fei-dark .wp-block-columns{position:relative;z-index:1}
+
+/* Header: lockup + breathing room */
+.site-header-wrap{box-shadow:0 1px 0 #1a202c14}
+.site-main-header-inner-wrap{min-height:76px}
+.site-branding .site-title,.site-main-header-wrap .site-title a{
+	font-weight:800;letter-spacing:.04em;font-size:1.35rem;text-transform:uppercase;color:var(--fei-navy)
+}
+.site-main-header-wrap .site-description{display:none}
+.site-main-header-wrap .primary-menu-container>ul{gap:.15rem}
+.site-main-header-wrap .primary-menu-container>ul>li>a{
+	padding:.65rem .85rem;position:relative
+}
+.site-main-header-wrap .primary-menu-container>ul>li>a::after{
+	content:"";position:absolute;left:.85rem;right:.85rem;bottom:.35rem;height:2px;background:var(--fei-gold);transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.22,1,.36,1)
+}
+.site-main-header-wrap .primary-menu-container>ul>li>a:hover::after,
+.site-main-header-wrap .primary-menu-container>ul>li.current-menu-item>a::after{transform:scaleX(1)}
+.site-header .fei-apply-btn{box-shadow:0 10px 26px -12px #ffb81da6}
+
+/* Utility bar */
+.site-top-header-wrap{letter-spacing:.02em}
+.fei-lang a.is-active{background:#ffffff18;border-color:#ffb81d;color:var(--fei-gold)}
+
+/* Home hero composition */
+.fei-home .fei-hero,
+.wp-block-cover.fei-hero{
+	min-height:88vh;padding-block:clamp(4rem,10vw,7rem)
+}
+.fei-hero .wp-block-cover__image-background{object-fit:cover}
+.fei-hero h1{text-wrap:balance;max-width:16ch;color:#fff}
+.fei-hero--page{min-height:42vh!important}
+.fei-hero .has-large-font-size{max-width:42ch;color:#ffffffe6;font-weight:500}
+.fei-hero .wp-block-button__link{min-height:48px}
+.fei-hero .is-style-outline .wp-block-button__link{
+	background:transparent;color:#fff;border:1.5px solid #ffffffb3;box-shadow:none
+}
+.fei-hero .is-style-outline .wp-block-button__link:hover{background:#fff;color:var(--fei-navy)}
+
+/* Section rhythm */
+.fei-home .entry-content>.wp-block-group.alignfull{
+	padding-top:clamp(4rem,8vw,6.5rem);padding-bottom:clamp(4rem,8vw,6.5rem)
+}
+.fei-home h2{text-wrap:balance}
+.fei-kicker{color:var(--fei-blue)}
+
+/* Editorial program tiles on home (plugin markup) */
+.fei-home .prog-tile{
+	border-left:3px solid transparent;padding-block:1.25rem
+}
+.fei-home .prog-tile:hover{border-left-color:var(--fei-gold)}
+
+/* Footer */
+.site-footer-wrap{border-top:4px solid var(--fei-gold);position:relative}
+.site-footer-wrap a{text-underline-offset:3px}
+
+/* Kadence content width + square everything leftover */
+.content-bg,body{background:var(--global-palette8)}
+.entry-hero.entry-hero-post-title{background:var(--fei-navy);color:#fff;border-radius:0}
+.wp-block-quote{border-left:6px solid var(--fei-gold);padding-left:1.25rem;font-weight:600}
+
+@media (max-width:768px){
+	.fei-home .fei-hero,.wp-block-cover.fei-hero{min-height:auto;padding-block:4.5rem}
+	.site-main-header-wrap .primary-menu-container>ul>li>a::after{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+	.fei-hero::after,.fei-dark::after{display:none}
+	.site-main-header-wrap .primary-menu-container>ul>li>a::after{transition:none}
+}

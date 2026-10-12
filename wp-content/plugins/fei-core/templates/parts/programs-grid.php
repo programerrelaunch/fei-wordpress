@@ -19,8 +19,11 @@ $icons = array(
 		?>
 		<li>
 			<a href="<?php echo esc_url( $p['url'] ); ?>" class="prog-tile reveal" data-cat="<?php echo esc_attr( $key ); ?>">
-				<?php if ( 'cards' === $style && ! empty( $full['image_url'] ) ) : ?>
-					<span class="prog-tile__media"><img src="<?php echo esc_url( $full['image_url'] ); ?>" alt="<?php echo esc_attr( $p['label'] ); ?>" loading="lazy" width="640" height="400"></span>
+				<?php
+				$banner = $full ? fei_program_banner_url( $full ) : fei_banner_url( in_array( $key, array( 'health', 'culinary', 'trades', 'business' ), true ) ? $key : 'campus' );
+				if ( 'cards' === $style ) :
+					?>
+					<span class="prog-tile__media"><img src="<?php echo esc_url( $banner ); ?>" alt="<?php echo esc_attr( $p['label'] ); ?>" loading="lazy" width="640" height="400"></span>
 				<?php else : ?>
 					<span class="prog-tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><?php echo $icons[ $key ] ?? $icons['business']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></svg></span>
 				<?php endif; ?>

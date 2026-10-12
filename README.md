@@ -25,6 +25,14 @@ Playground limits: state is per browser tab (reload = fresh install), outbound H
 
 Program content source of truth: `wp-content/plugins/fei-core/data/programs.json` (verbatim from fei.edu; nothing invented). Seeded on plugin activation; re-run from FEI → Settings if programs are deleted.
 
+## Live demo (WordPress Playground)
+
+**Open the site:** [https://playground.wordpress.net/?mode=seamless&php=8.2&wp=latest&networking=yes&login=yes&url=/&blueprint-url=https://raw.githubusercontent.com/programerrelaunch/fei-wp-playground-demo/main/blueprint.json](https://playground.wordpress.net/?mode=seamless&php=8.2&wp=latest&networking=yes&login=yes&url=/&blueprint-url=https://raw.githubusercontent.com/programerrelaunch/fei-wp-playground-demo/main/blueprint.json)
+
+First load takes about a minute (WordPress + Kadence + FEI plugin install in the browser). WP admin: `admin` / `password`. This is a free sandbox, not production `fei.edu` — see `migration/RUNBOOK.md` for Hostinger cutover.
+
+Artifacts: [github.com/programerrelaunch/fei-wp-playground-demo](https://github.com/programerrelaunch/fei-wp-playground-demo)
+
 ## Local checks
 ```powershell
 C:\xampp\php\php.exe tests\run.php

@@ -12,7 +12,7 @@ while ( have_posts() ) :
 	$pr   = FEI_Programs::get_program( $id );
 	$org  = fei_org();
 	$lang = fei_lang();
-	$hero = $pr['image_url'] ?: '';
+	$hero = fei_program_banner_url( $pr );
 	?>
 	<main id="top" class="fei-main fei-program-page" tabindex="-1">
 		<section class="phero" <?php echo $hero ? 'style="--hero:url(' . esc_url( $hero ) . ')"' : ''; ?>>

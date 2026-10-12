@@ -2,18 +2,20 @@
 /**
  * Pattern: FEI Home (English) — full page, copy verbatim from fei.edu/ (2026-10-12).
  * Insert on the "Home" page (Template: Full width / no title). Hero image: upload
- * public/img/hero-campus.jpg from the Astro repo and set it as the Cover background.
+ * Bundled campus banner is used until official Astro photography is uploaded.
  */
 defined( 'ABSPATH' ) || exit;
+
+$hero = esc_url( function_exists( 'fei_banner_url' ) ? fei_banner_url( 'campus' ) : '' );
 
 return array(
 	'title'       => 'FEI Home — English',
 	'description' => 'Hero, program tiles, FEI Advantage, admissions steps, financial aid, support quote, FAQ, final CTA.',
 	'keywords'    => array( 'fei', 'home' ),
 	'blockTypes'  => array( 'core/post-content' ),
-	'content'     => <<<'HTML'
-<!-- wp:cover {"dimRatio":0,"minHeight":80,"minHeightUnit":"vh","contentPosition":"center left","align":"full","className":"fei-hero"} -->
-<div class="wp-block-cover alignfull has-custom-content-position is-position-center-left fei-hero" style="min-height:80vh"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container">
+	'content'     => <<<HTML
+<!-- wp:cover {"url":"{$hero}","dimRatio":70,"isUserOverlayColor":true,"minHeight":88,"minHeightUnit":"vh","contentPosition":"center left","align":"full","className":"fei-hero"} -->
+<div class="wp-block-cover alignfull has-custom-content-position is-position-center-left fei-hero" style="min-height:88vh"><img class="wp-block-cover__image-background" alt="" src="{$hero}" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-70 has-background-dim" style="background-color:#112550"></span><div class="wp-block-cover__inner-container">
 <!-- wp:group {"layout":{"type":"constrained","contentSize":"1200px"}} --><div class="wp-block-group">
 <!-- wp:paragraph {"className":"fei-kicker"} --><p class="fei-kicker" style="color:#ffb81d">Miami, Florida · Career Education</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":1} --><h1 class="wp-block-heading">You will never be a <em>number.</em></h1><!-- /wp:heading -->
@@ -32,7 +34,7 @@ return array(
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"5rem","bottom":"5rem"}}},"layout":{"type":"constrained","contentSize":"1200px"}} --><div class="wp-block-group alignfull" style="padding-top:5rem;padding-bottom:5rem" id="programs">
 <!-- wp:paragraph {"className":"fei-kicker"} --><p class="fei-kicker">Programs</p><!-- /wp:paragraph -->
 <!-- wp:heading --><h2 class="wp-block-heading">Pick the career.<br>We will teach you the skills.</h2><!-- /wp:heading -->
-<!-- wp:shortcode -->[fei_programs_grid style="tiles"]<!-- /wp:shortcode -->
+<!-- wp:shortcode -->[fei_programs_grid style="cards"]<!-- /wp:shortcode -->
 <!-- wp:paragraph --><p><a href="/programs/">View all programs →</a></p><!-- /wp:paragraph -->
 </div><!-- /wp:group -->
 

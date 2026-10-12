@@ -16,7 +16,7 @@ $tel   = ( 10 === strlen( $tel ) ? '+1' : '+' ) . $tel;
 $h1    = $lp['headline'] ?: ( $pr['title'] ?? get_the_title() );
 $sub   = $lp['subheadline'] ?: ( $pr['lede'] ?? '' );
 $cta   = $lp['cta_label'] ?: ( 'es' === $lang ? 'Recibe información del programa' : 'Get program details' );
-$hero  = $lp['hero_image'] ?: ( $pr['image_url'] ?? '' );
+$hero  = $lp['hero_image'] ?: ( $pr ? fei_program_banner_url( $pr ) : fei_banner_url( 'campus' ) );
 $next  = $lp['next_url'] ?: home_url( 'es' === $lang ? '/es/inscripcion/' : '/apply/' );
 ?>
 <!DOCTYPE html>

@@ -8,12 +8,16 @@ $areas = get_terms( array( 'taxonomy' => FEI_Programs::TAX, 'hide_empty' => true
 $all   = FEI_Programs::catalog();
 ?>
 <main id="top" class="fei-main" tabindex="-1">
+	<section class="phero phero--index">
+		<img class="phero__img" src="<?php echo esc_url( fei_banner_url( 'campus' ) ); ?>" alt="" fetchpriority="high" width="1600" height="700">
+		<div class="phero__overlay" aria-hidden="true"></div>
+		<div class="phero__inner">
+			<p class="kicker kicker--light"><?php echo esc_html( fei_t( 'programs' ) ); ?></p>
+			<h1 class="phero__title"><?php echo esc_html( 'es' === $lang ? 'Elige la carrera. Te enseñamos las habilidades.' : 'Pick the career. We will teach you the skills.' ); ?></h1>
+		</div>
+	</section>
 	<section class="section programs programs--index">
 		<div class="section__head">
-			<div>
-				<p class="kicker"><?php echo esc_html( fei_t( 'programs' ) ); ?></p>
-				<h1 class="section__title"><?php echo esc_html( 'es' === $lang ? 'Elige la carrera. Te enseñamos las habilidades.' : 'Pick the career. We will teach you the skills.' ); ?></h1>
-			</div>
 			<p class="section__intro"><?php echo esc_html( 'es' === $lang ? 'Once programas enfocados y orientados a la carrera en salud, artes culinarias, oficios especializados y negocios. Caminos cortos, habilidades reales e instructores que han hecho el trabajo.' : 'Eleven focused, career-driven programs across healthcare, culinary arts, skilled trades and business. Short paths, real skills, and instructors who have done the work.' ); ?></p>
 		</div>
 		<?php if ( $areas && ! is_wp_error( $areas ) ) : ?>

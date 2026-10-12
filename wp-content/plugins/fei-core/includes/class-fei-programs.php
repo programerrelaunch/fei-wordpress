@@ -117,7 +117,10 @@ final class FEI_Programs {
 		$terms        = get_the_terms( $post_id, self::TAX );
 		$out['area']  = ( $terms && ! is_wp_error( $terms ) ) ? $terms[0]->name : '';
 		$out['area_slug'] = ( $terms && ! is_wp_error( $terms ) ) ? $terms[0]->slug : '';
-		$out['image_url'] = get_the_post_thumbnail_url( $post_id, 'large' ) ?: ( $out['image'] ?: '' );
+		$thumb = get_the_post_thumbnail_url( $post_id, 'large' );
+		$meta  = (string) ( $out['image'] ?? '' );
+		$astro = $meta && ( str_starts_with( $meta, '/img/' ) || ! preg_match( '#^(https?:)?//#', $meta ) );
+		$out['image_url'] = $thumb ?: ( ( $meta && ! $astro ) ? $meta : '' );
 		return $out;
 	}
 

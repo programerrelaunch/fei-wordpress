@@ -2,16 +2,24 @@
 /** Pattern: /apply page (English) — copy verbatim from fei.edu/apply. ES: /es/inscripcion uses the same shortcode. */
 defined( 'ABSPATH' ) || exit;
 
+$banner = esc_url( function_exists( 'fei_banner_url' ) ? fei_banner_url( 'apply' ) : '' );
+
 return array(
 	'title'      => 'FEI Apply page — English',
 	'keywords'   => array( 'fei', 'apply' ),
 	'blockTypes' => array( 'core/post-content' ),
-	'content'    => <<<'HTML'
+	'content'    => <<<HTML
+<!-- wp:cover {"url":"{$banner}","dimRatio":65,"minHeight":42,"minHeightUnit":"vh","contentPosition":"center left","align":"full","className":"fei-hero fei-hero--page"} -->
+<div class="wp-block-cover alignfull has-custom-content-position is-position-center-left fei-hero fei-hero--page" style="min-height:42vh"><img class="wp-block-cover__image-background" alt="" src="{$banner}" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-70 has-background-dim" style="background-color:#112550"></span><div class="wp-block-cover__inner-container">
+<!-- wp:group {"layout":{"type":"constrained","contentSize":"1200px"}} --><div class="wp-block-group">
+<!-- wp:paragraph {"className":"fei-kicker"} --><p class="fei-kicker" style="color:#ffb81d">Apply Now</p><!-- /wp:paragraph -->
+<!-- wp:heading {"level":1} --><h1 class="wp-block-heading" style="color:#fff">Applying is simple.</h1><!-- /wp:heading -->
+</div><!-- /wp:group --></div></div>
+<!-- /wp:cover -->
+
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"4rem","bottom":"5rem"}}},"layout":{"type":"constrained","contentSize":"1200px"}} --><div class="wp-block-group alignfull" style="padding-top:4rem;padding-bottom:5rem">
 <!-- wp:columns {"verticalAlignment":"top"} --><div class="wp-block-columns are-vertically-aligned-top">
 <!-- wp:column {"width":"45%"} --><div class="wp-block-column" style="flex-basis:45%">
-<!-- wp:paragraph {"className":"fei-kicker"} --><p class="fei-kicker">Apply Now</p><!-- /wp:paragraph -->
-<!-- wp:heading {"level":1} --><h1 class="wp-block-heading">Applying is simple.</h1><!-- /wp:heading -->
 <!-- wp:paragraph --><p>Applying for enrollment at Florida Education Institute was designed to be simple. Completing the application form here begins the enrollment process.</p><!-- /wp:paragraph -->
 <!-- wp:paragraph --><p>After applying, we will contact you to set your admissions appointment with one of our Career Education Advisors. We want your education to be life-changing and meaningful to your future, so selecting a career that is right for you will be our first priority.</p><!-- /wp:paragraph -->
 <!-- wp:paragraph --><p>We will discuss your goals and find out if Florida Education Institute is right for you. We will give you a tour of our facilities and have you speak with our staff and instructors, who are committed to personal attention and student success. We also encourage you to ask questions, so we can provide you with an education and career plan that you believe in.</p><!-- /wp:paragraph -->

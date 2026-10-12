@@ -41,6 +41,38 @@ function fei_org(): array {
 	);
 }
 
+/**
+ * Default photographic banners bundled with the plugin (stock placeholders until
+ * official campus/program photography from the Astro repo is uploaded).
+ */
+function fei_banner_url( string $slot = 'campus' ): string {
+	$map  = array(
+		'campus'   => 'hero-campus.jpg',
+		'health'   => 'health.jpg',
+		'culinary' => 'culinary.jpg',
+		'trades'   => 'trades.jpg',
+		'business' => 'business.jpg',
+		'apply'    => 'apply.jpg',
+	);
+	$file = $map[ $slot ] ?? $map['campus'];
+	if ( defined( 'FEI_CORE_URL' ) ) {
+		return FEI_CORE_URL . 'assets/img/' . $file;
+	}
+	return 'assets/img/' . $file;
+}
+
+/** Featured image, else area banner, else campus hero. */
+function fei_program_banner_url( array $pr ): string {
+	if ( ! empty( $pr['image_url'] ) ) {
+		return (string) $pr['image_url'];
+	}
+	$area = str_replace( '-es', '', (string) ( $pr['area_slug'] ?? '' ) );
+	if ( in_array( $area, array( 'health', 'culinary', 'trades', 'business' ), true ) ) {
+		return fei_banner_url( $area );
+	}
+	return fei_banner_url( 'campus' );
+}
+
 /** Current language slug ('en' | 'es') — Polylang aware, safe without it. */
 function fei_lang(): string {
 	if ( function_exists( 'pll_current_language' ) ) {

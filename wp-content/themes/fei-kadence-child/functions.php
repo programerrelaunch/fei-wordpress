@@ -5,6 +5,25 @@
 
 defined( 'ABSPATH' ) || exit;
 
+add_filter(
+	'body_class',
+	static function ( array $classes ): array {
+		$classes[] = 'fei-brand';
+		if ( is_front_page() ) {
+			$classes[] = 'fei-home';
+		}
+		return $classes;
+	}
+);
+
+add_action(
+	'wp_body_open',
+	static function (): void {
+		echo '<a class="skip-link screen-reader-text" href="#inner-wrap">Skip to content</a>';
+	},
+	1
+);
+
 add_action(
 	'wp_enqueue_scripts',
 	static function (): void {
