@@ -29,10 +29,9 @@
 .crumbs{font-size:.85rem;color:#ffffffcc;margin-bottom:1rem}.crumbs a{color:#fff;text-decoration:none}.crumbs a:hover{text-decoration:underline}
 
 /* Hero (program) */
-.phero,.lp-hero{position:relative;background:var(--fei-dark-grad);color:#fff;overflow:hidden;isolation:isolate}
-.phero,.lp-hero{background-image:radial-gradient(1100px 500px at 8% -8%,#ffb81d24,transparent 50%),radial-gradient(800px 400px at 100% 100%,#0072ce40,transparent 48%),var(--fei-dark-grad)}
+.phero,.lp-hero{position:relative;background:#101624;color:#fff;overflow:hidden;isolation:isolate;min-height:58vh}
 .phero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
-.phero__overlay,.lp-hero__overlay{position:absolute;inset:0;background:linear-gradient(100deg,#112550f2 0%,#163a76d9 55%,#1b4890b3 100%);z-index:-1}
+.phero__overlay,.lp-hero__overlay{position:absolute;inset:0;background:linear-gradient(90deg,#101624e3 0%,#10162480 42%,#1016241a 100%);z-index:-1}
 .lp-hero{background:var(--fei-hero,var(--fei-dark-grad)) center/cover no-repeat}.lp-hero[style*="--hero"]{background-image:var(--hero)}
 .phero__inner,.lp-hero__inner{max-width:var(--fei-wrap);margin:0 auto;padding:clamp(3.5rem,9vw,7rem) var(--fei-pad) clamp(3rem,7vw,5rem)}
 .phero__title,.lp-hero__title{font-family:var(--fei-display);font-size:clamp(2.2rem,5.2vw,4rem);font-weight:800;line-height:1.02;letter-spacing:-.03em;margin:0 0 1rem}

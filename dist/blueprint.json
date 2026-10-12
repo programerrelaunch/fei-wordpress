@@ -29,7 +29,7 @@
             "step": "installPlugin",
             "pluginData": {
                 "resource": "url",
-                "url": "https://raw.githubusercontent.com/programerrelaunch/fei-wp-playground-demo/653359cb51ab22ac5a84bbc647fdff23089a637c/fei-core.zip"
+                "url": "https://raw.githubusercontent.com/programerrelaunch/fei-wp-playground-demo/27628de08aee61c190bbfdf4372d86b6af61d62f/fei-core.zip"
             },
             "options": {
                 "activate": false
@@ -39,7 +39,7 @@
             "step": "installTheme",
             "themeData": {
                 "resource": "url",
-                "url": "https://raw.githubusercontent.com/programerrelaunch/fei-wp-playground-demo/d90a77eaee1e8a4d9884214757a56e4b17c9b7f2/fei-kadence-child.zip"
+                "url": "https://raw.githubusercontent.com/programerrelaunch/fei-wp-playground-demo/f92f2d962b9142f5e979ba1354922a50b7472f48/fei-kadence-child.zip"
             },
             "options": {
                 "activate": true

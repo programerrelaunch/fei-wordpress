@@ -6,6 +6,26 @@
 defined( 'ABSPATH' ) || exit;
 
 add_filter(
+	'kadence_page_layout',
+	static function ( string $layout ): string {
+		if ( is_front_page() || is_page( array( 'apply', 'home' ) ) || is_singular( 'fei_program' ) || is_post_type_archive( 'fei_program' ) ) {
+			return 'fullwidth';
+		}
+		return $layout;
+	}
+);
+
+add_filter(
+	'kadence_entry_header',
+	static function ( bool $show ): bool {
+		if ( is_front_page() || is_page( array( 'apply', 'home' ) ) ) {
+			return false;
+		}
+		return $show;
+	}
+);
+
+add_filter(
 	'body_class',
 	static function ( array $classes ): array {
 		$classes[] = 'fei-brand';

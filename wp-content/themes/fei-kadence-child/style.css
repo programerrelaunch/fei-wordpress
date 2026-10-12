@@ -3,160 +3,161 @@ Theme Name:   FEI — Kadence Child
 Theme URI:    https://fei.edu/
 Template:     kadence
 Author:       FEI Web Team
-Description:  Florida Education Institute child theme. Maps the fei.edu design system (Montserrat, navy/gold/blue, square corners, dark gradient bands) onto Kadence and ships the home/utility-bar patterns. Functional logic lives in the fei-core plugin.
-Version:      1.1.0
+Description:  Florida Education Institute. Photographic, modern campus look. Logic is in fei-core.
+Version:      1.3.0
 Requires at least: 6.4
 Requires PHP: 8.1
 License:      GNU General Public License v2 or later
 Text Domain:  fei-kadence-child
 */
 
-/* ---- Tokens → Kadence global palette (also set in Customizer: Appearance › Customize › Colors) ---- */
 :root{
-	--global-palette1:#0072ce; /* blue */
-	--global-palette2:#005399; /* blue-600 */
-	--global-palette3:#1a202c; /* navy — headings */
-	--global-palette4:#2d3748; /* slate — body */
-	--global-palette5:#4a5568; /* gray */
-	--global-palette6:#5b6472; /* gray-500 */
-	--global-palette7:#edf2f7; /* tint */
-	--global-palette8:#f7fafc; /* bg */
-	--global-palette9:#ffffff;
-	--fei-gold:#ffb81d;--fei-gold-600:#f5a524;--fei-navy:#1a202c;--fei-blue:#0072ce;
+	--fei-gold:#ffb81d;--fei-gold-600:#e5a40f;--fei-navy:#101624;--fei-ink:#1a202c;
+	--fei-blue:#0072ce;--fei-muted:#5b6472;--fei-line:#e6eaf0;--fei-bg:#f4f6f8;
+	--fei-wrap:1180px;--fei-ease:cubic-bezier(.22,1,.36,1);
+	--global-palette1:#0072ce;--global-palette3:#1a202c;--global-palette8:#f4f6f8;--global-palette9:#fff;
 	--global-heading-font-family:"Montserrat",system-ui,sans-serif;
 	--global-body-font-family:"Montserrat",system-ui,sans-serif;
 }
-body{background:var(--global-palette8);color:var(--global-palette3);-webkit-font-smoothing:antialiased}
-h1,h2,h3,h4,.site-title{font-family:var(--global-heading-font-family);font-weight:800;letter-spacing:-.02em;line-height:1.08}
-::selection{background:var(--fei-blue);color:#fff}
-
-/* Square corners everywhere (Astro site uses radius 0) */
-.button,.wp-block-button__link,.kb-button,input,select,textarea,.wp-block-kadence-advancedbtn .kb-btn,.site-header .button{border-radius:0!important}
-
-/* Buttons: gold solid, navy text (primary); navy outline (secondary) */
-.button,.wp-block-button__link,.kb-button,.wp-element-button{background:var(--fei-gold);color:var(--fei-navy);font-weight:700;letter-spacing:.01em;padding:.82em 1.5em;border:1.5px solid transparent;box-shadow:0 10px 26px -12px #ffb81da6;transition:transform .35s cubic-bezier(.22,1,.36,1),background .25s}
-.button:hover,.wp-block-button__link:hover,.kb-button:hover,.wp-element-button:hover{background:var(--fei-gold-600);color:var(--fei-navy);transform:translateY(-2px)}
-.is-style-outline .wp-block-button__link,.button--outline{background:transparent;color:var(--fei-navy);border-color:var(--fei-navy);box-shadow:none}
-.is-style-outline .wp-block-button__link:hover{background:var(--fei-navy);color:#fff}
-
-/* Utility bar (Kadence "Top Row") */
-.site-top-header-wrap{background:var(--fei-navy);color:#fff;font-size:.82rem;font-weight:600}
-.site-top-header-wrap a{color:#fff}.site-top-header-wrap a:hover{color:var(--fei-gold)}
-.fei-utility{display:flex;gap:.75rem;align-items:center;justify-content:flex-end}.fei-utility__sep{opacity:.4}
-.fei-lang a{display:inline-flex;gap:.3rem;align-items:center;padding:.15rem .4rem;border:1px solid transparent}.fei-lang a.is-active{border-color:#ffffff66}
-
-/* Main header */
-.site-main-header-wrap{background:#fff;border-bottom:1px solid #1a202c1f}
-.site-main-header-wrap .primary-menu-container>ul>li>a{font-weight:700;font-size:.95rem;color:var(--fei-navy)}
-.site-main-header-wrap .primary-menu-container>ul>li>a:hover{color:var(--fei-blue)}
-.site-header .fei-apply-btn{background:var(--fei-gold);color:var(--fei-navy);font-weight:700;padding:.7em 1.3em}
-
-/* Footer */
-.site-footer-wrap{background:var(--fei-navy);color:#edf2f7}.site-footer-wrap a{color:#edf2f7}.site-footer-wrap a:hover{color:var(--fei-gold)}
-.site-footer-wrap h4,.site-footer-wrap .widget-title{color:#fff;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase}
-.site-bottom-footer-wrap{background:#111726;font-size:.8rem}
-
-/* Home sections authored as patterns */
-.fei-hero{background:linear-gradient(100deg,#112550 0%,#163a76 52%,#1b4890 100%);color:#fff;position:relative;isolation:isolate}
-.fei-hero.has-background-image{background-size:cover;background-position:center}
-.fei-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,#112550f2 0%,#163a76d9 55%,#1b4890b3 100%);z-index:-1}
-.fei-hero h1{font-size:clamp(2.4rem,6vw,4.6rem);line-height:1;letter-spacing:-.03em}.fei-hero h1 em{font-style:normal;color:var(--fei-gold)}
-.fei-marquee{background:var(--fei-navy);color:#fff;overflow:hidden;white-space:nowrap;padding:.7rem 0;font-weight:700;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase}
-.fei-marquee__track{display:inline-block;animation:fei-marquee 40s linear infinite}.fei-marquee .sep{color:var(--fei-gold);margin:0 1.2rem}
-@keyframes fei-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.fei-marquee__track{animation:none}}
-.fei-dark{background:linear-gradient(100deg,#112550 0%,#163a76 52%,#1b4890 100%);color:#fff}
-.fei-tint{background:#edf2f7}
-.fei-kicker{font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--fei-blue);margin-bottom:.6rem}
-.fei-dark .fei-kicker{color:var(--fei-gold)}
-
-/* Blog cards (headless blog migrated natively) */
-.entry.loop-entry{border:1px solid #1a202c1f;border-radius:0;box-shadow:none}
-.entry.loop-entry:hover{box-shadow:0 24px 40px -28px #1a202c80}
-
-/* Focus ring parity */
-:where(a,button,input,select,textarea,[tabindex]):focus-visible{outline:3px solid var(--fei-gold);outline-offset:2px}
-
-/* ========== 1.1 UI polish — campus catalog, not generic Kadence ========== */
-.fei-brand{--fei-hair:4px}
-.fei-brand::before{content:"";display:block;height:var(--fei-hair);background:var(--fei-gold);position:relative;z-index:100}
-
-/* Grain + atmosphere on dark planes (no extra image files) */
-.fei-hero,.fei-dark,.site-footer-wrap,.cta{
-	background-image:
-		radial-gradient(1200px 480px at 12% -10%,#ffb81d22,transparent 55%),
-		radial-gradient(900px 420px at 92% 110%,#0072ce33,transparent 50%);
+html{scroll-behavior:smooth}
+body.fei-brand{
+	margin:0;background:#fff;color:var(--fei-ink);
+	font-family:var(--global-body-font-family);-webkit-font-smoothing:antialiased;
 }
-.fei-hero::after,.fei-dark::after{
-	content:"";position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.22;
-	background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-.fei-hero .wp-block-cover__inner-container,.fei-dark .wp-block-group,.fei-dark .wp-block-columns{position:relative;z-index:1}
+h1,h2,h3,h4{font-family:var(--global-heading-font-family);font-weight:800;letter-spacing:-.03em;line-height:1.05}
+::selection{background:var(--fei-gold);color:var(--fei-navy)}
+img{max-width:100%;height:auto}
 
-/* Header: lockup + breathing room */
-.site-header-wrap{box-shadow:0 1px 0 #1a202c14}
-.site-main-header-inner-wrap{min-height:76px}
-.site-branding .site-title,.site-main-header-wrap .site-title a{
-	font-weight:800;letter-spacing:.04em;font-size:1.35rem;text-transform:uppercase;color:var(--fei-navy)
-}
-.site-main-header-wrap .site-description{display:none}
-.site-main-header-wrap .primary-menu-container>ul{gap:.15rem}
-.site-main-header-wrap .primary-menu-container>ul>li>a{
-	padding:.65rem .85rem;position:relative
-}
-.site-main-header-wrap .primary-menu-container>ul>li>a::after{
-	content:"";position:absolute;left:.85rem;right:.85rem;bottom:.35rem;height:2px;background:var(--fei-gold);transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.22,1,.36,1)
-}
-.site-main-header-wrap .primary-menu-container>ul>li>a:hover::after,
-.site-main-header-wrap .primary-menu-container>ul>li.current-menu-item>a::after{transform:scaleX(1)}
-.site-header .fei-apply-btn{box-shadow:0 10px 26px -12px #ffb81da6}
+/* Hide stock Kadence chrome — we ship our own header/footer */
+.site-header-wrap,.site-top-header-wrap,.site-footer-wrap,.site-bottom-footer-wrap,
+.fei-home .entry-hero,.fei-home .entry-header,.page .entry-hero,
+.entry-hero.entry-hero-post-title{display:none!important}
 
-/* Utility bar */
-.site-top-header-wrap{letter-spacing:.02em}
-.fei-lang a.is-active{background:#ffffff18;border-color:#ffb81d;color:var(--fei-gold)}
+.fei-chrome,.fei-foot,.fei-nav,.fei-logo{box-sizing:border-box}
+.fei-chrome *,.fei-foot *{box-sizing:border-box}
+.fei-chrome__wrap,.fei-foot__grid{width:min(var(--fei-wrap),calc(100% - 2.5rem));margin:0 auto}
 
-/* Home hero composition */
-.fei-home .fei-hero,
+/* Top bar */
+.fei-chrome__util{background:var(--fei-navy);color:#c5ccd6;font-size:.78rem;font-weight:600;letter-spacing:.02em}
+.fei-chrome__util .fei-chrome__wrap{display:flex;justify-content:space-between;align-items:center;min-height:36px;gap:1rem}
+.fei-chrome__place{opacity:.75}
+.fei-chrome__util a{color:#fff;text-decoration:none}
+.fei-chrome__util a:hover{color:var(--fei-gold)}
+.fei-utility{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.fei-utility__sep{opacity:.35}
+.fei-lang a{padding:.1rem .35rem;border:1px solid transparent;text-decoration:none;color:#fff}
+.fei-lang a.is-active{border-color:var(--fei-gold);color:var(--fei-gold)}
+
+/* Main nav */
+.fei-chrome__main{background:#fff;border-bottom:1px solid var(--fei-line);position:sticky;top:0;z-index:80}
+.fei-chrome__main .fei-chrome__wrap{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;min-height:78px}
+.fei-logo{display:flex;flex-direction:column;line-height:1.05;text-decoration:none;color:var(--fei-navy)}
+.fei-logo strong{font-size:1.55rem;letter-spacing:.12em;font-weight:800}
+.fei-logo span{font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fei-muted);font-weight:600}
+.fei-logo--light{color:#fff}.fei-logo--light span{color:#9aa3b2}
+.fei-nav{display:flex;align-items:center;gap:.15rem 1.15rem;flex-wrap:wrap}
+.fei-nav a{color:var(--fei-ink);text-decoration:none;font-weight:700;font-size:.9rem}
+.fei-nav a:hover{color:var(--fei-blue)}
+.fei-nav__cta{
+	background:var(--fei-gold)!important;color:var(--fei-navy)!important;
+	padding:.7em 1.2em;font-weight:800;margin-left:.4rem
+}
+.fei-nav__cta:hover{background:var(--fei-gold-600)!important}
+.fei-nav-burger{display:none;width:42px;height:42px;place-items:center;cursor:pointer;border:1px solid var(--fei-line)}
+.fei-nav-burger span,.fei-nav-burger span:before,.fei-nav-burger span:after{
+	display:block;width:18px;height:2px;background:var(--fei-navy);position:relative
+}
+.fei-nav-burger span:before,.fei-nav-burger span:after{content:"";position:absolute;left:0}
+.fei-nav-burger span:before{top:-6px}.fei-nav-burger span:after{top:6px}
+
+/* Hero — photo first, shade only behind type */
 .wp-block-cover.fei-hero{
-	min-height:88vh;padding-block:clamp(4rem,10vw,7rem)
+	min-height:86vh;padding:0!important;position:relative;overflow:hidden
 }
-.fei-hero .wp-block-cover__image-background{object-fit:cover}
-.fei-hero h1{text-wrap:balance;max-width:16ch;color:#fff}
-.fei-hero--page{min-height:42vh!important}
-.fei-hero .has-large-font-size{max-width:42ch;color:#ffffffe6;font-weight:500}
-.fei-hero .wp-block-button__link{min-height:48px}
+.fei-hero .wp-block-cover__image-background{object-fit:cover;object-position:center 30%}
+.fei-hero .wp-block-cover__background{
+	background:linear-gradient(90deg,#101624e6 0%,#10162499 38%,#10162422 72%,transparent 100%)!important;
+	opacity:1!important
+}
+.fei-hero .wp-block-cover__inner-container{
+	width:min(var(--fei-wrap),calc(100% - 2.5rem));margin:0 auto;padding:clamp(5rem,12vw,8rem) 0;
+	position:relative;z-index:1
+}
+.fei-hero h1{font-size:clamp(2.6rem,6.5vw,5rem);max-width:11ch;color:#fff;text-wrap:balance;margin:.2rem 0 1rem}
+.fei-hero h1 em{font-style:normal;color:var(--fei-gold)}
+.fei-kicker{font-size:.75rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--fei-blue);margin:0 0 .6rem}
+.fei-hero .fei-kicker{color:var(--fei-gold)!important}
+.fei-hero .has-large-font-size{max-width:38ch;color:#ffffffd6;font-weight:500;font-size:1.15rem!important;line-height:1.55}
+.fei-hero .wp-block-buttons{margin:1.6rem 0 1rem;gap:.7rem}
+.fei-hero .wp-block-button__link{
+	background:var(--fei-gold);color:var(--fei-navy);border-radius:0!important;font-weight:800;
+	padding:.95em 1.6em;box-shadow:none;min-height:48px
+}
 .fei-hero .is-style-outline .wp-block-button__link{
-	background:transparent;color:#fff;border:1.5px solid #ffffffb3;box-shadow:none
+	background:transparent!important;color:#fff!important;border:1.5px solid #fff
 }
-.fei-hero .is-style-outline .wp-block-button__link:hover{background:#fff;color:var(--fei-navy)}
+.fei-hero .is-style-outline .wp-block-button__link:hover{background:#fff!important;color:var(--fei-navy)!important}
+.fei-hero--page{min-height:46vh!important}
+.fei-hero--page .wp-block-cover__inner-container{padding:5rem 0}
 
-/* Section rhythm */
+/* Buttons globally */
+.wp-block-button__link,.button,.wp-element-button{
+	border-radius:0!important;background:var(--fei-gold);color:var(--fei-navy);font-weight:800
+}
+.wp-block-button__link:hover{background:var(--fei-gold-600);color:var(--fei-navy)}
+
+/* Marquee */
+.fei-marquee{background:var(--fei-navy);color:#fff;overflow:hidden;white-space:nowrap;padding:.85rem 0;font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+.fei-marquee__track{display:inline-block;animation:fei-marquee 38s linear infinite}
+.fei-marquee .sep{color:var(--fei-gold);margin:0 1.4rem}
+@keyframes fei-marquee{to{transform:translateX(-50%)}}
+
+/* Home sections */
 .fei-home .entry-content>.wp-block-group.alignfull{
-	padding-top:clamp(4rem,8vw,6.5rem);padding-bottom:clamp(4rem,8vw,6.5rem)
+	padding-top:clamp(4.5rem,8vw,6.5rem)!important;padding-bottom:clamp(4.5rem,8vw,6.5rem)!important
 }
-.fei-home h2{text-wrap:balance}
-.fei-kicker{color:var(--fei-blue)}
+.fei-home h2{font-size:clamp(1.8rem,3.4vw,2.8rem);text-wrap:balance}
+.fei-dark{background:var(--fei-navy);color:#fff;position:relative}
+.fei-tint{background:var(--fei-bg)}
+.fei-dark .fei-kicker{color:var(--fei-gold)}
+.wp-block-quote{border:0;border-left:4px solid var(--fei-gold);padding-left:1.25rem;font-size:1.2rem;font-weight:600}
 
-/* Editorial program tiles on home (plugin markup) */
-.fei-home .prog-tile{
-	border-left:3px solid transparent;padding-block:1.25rem
+/* Program photo cards */
+.prog-list--cards{gap:1.25rem!important}
+.prog-list--cards .prog-tile{
+	border:0!important;box-shadow:0 18px 40px -28px #10162488;background:#fff
 }
-.fei-home .prog-tile:hover{border-left-color:var(--fei-gold)}
+.prog-list--cards .prog-tile__media img{height:240px!important}
 
 /* Footer */
-.site-footer-wrap{border-top:4px solid var(--fei-gold);position:relative}
-.site-footer-wrap a{text-underline-offset:3px}
+.fei-foot{background:var(--fei-navy);color:#c5ccd6;padding:4rem 0 1.5rem;margin-top:0}
+.fei-foot a{color:#fff;text-decoration:none}
+.fei-foot a:hover{color:var(--fei-gold)}
+.fei-foot__grid{display:grid;gap:2.5rem;grid-template-columns:1.4fr 1fr 1fr;padding-bottom:2.5rem}
+.fei-foot h2{color:#fff;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;margin:0 0 1rem}
+.fei-foot ul{list-style:none;margin:0;padding:0;display:grid;gap:.45rem}
+.fei-foot__social{display:flex;gap:1rem;margin-top:1.2rem}
+.fei-foot__copy{width:min(var(--fei-wrap),calc(100% - 2.5rem));margin:0 auto;padding-top:1.25rem;border-top:1px solid #ffffff22;font-size:.8rem}
 
-/* Kadence content width + square everything leftover */
-.content-bg,body{background:var(--global-palette8)}
-.entry-hero.entry-hero-post-title{background:var(--fei-navy);color:#fff;border-radius:0}
-.wp-block-quote{border-left:6px solid var(--fei-gold);padding-left:1.25rem;font-weight:600}
+#inner-wrap,.content-bg,body .content-container{background:#fff}
+.site,.wrap{max-width:none}
 
-@media (max-width:768px){
-	.fei-home .fei-hero,.wp-block-cover.fei-hero{min-height:auto;padding-block:4.5rem}
-	.site-main-header-wrap .primary-menu-container>ul>li>a::after{display:none}
+@media (max-width:900px){
+	.fei-nav-burger{display:grid}
+	.fei-nav{
+		display:none;position:absolute;left:0;right:0;top:100%;background:#fff;
+		flex-direction:column;align-items:stretch;padding:1rem 1.25rem 1.4rem;
+		border-bottom:1px solid var(--fei-line);box-shadow:0 18px 40px -24px #0006
+	}
+	.fei-nav-toggle:checked ~ .fei-nav{display:flex}
+	.fei-chrome__main{position:relative}
+	.fei-nav__cta{margin:0.6rem 0 0}
+	.fei-foot__grid{grid-template-columns:1fr}
+	.wp-block-cover.fei-hero{min-height:78vh}
+	.fei-hero h1{max-width:14ch}
 }
 @media (prefers-reduced-motion:reduce){
-	.fei-hero::after,.fei-dark::after{display:none}
-	.site-main-header-wrap .primary-menu-container>ul>li>a::after{transition:none}
+	.fei-marquee__track{animation:none}
+	html{scroll-behavior:auto}
 }
+:where(a,button,input,select,textarea,[tabindex]):focus-visible{outline:3px solid var(--fei-gold);outline-offset:2px}
